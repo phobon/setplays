@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import Square from "./square";
 
-const Squares = styled.ul`
+const Layout = styled.ul`
     pointer-events: none;
     position: absolute;
     left: 0;
@@ -13,16 +13,19 @@ const Squares = styled.ul`
     display: grid;
     grid-auto-rows: 1fr;
     grid-template-columns: 1fr 1fr;
+    overflow: hidden;
 `;
 
 export default (props) => {
-    const { accent } = props;
+    const { accent, isMouseOver } = props;
+
+    const sq = [];
+    for (let i = 0; i < 4; i++) {
+        sq.push(<Square key={i} accent={accent} isMouseOver={isMouseOver}/>)
+    }
     return (
-        <Squares>
-            <Square accent={accent} delay={80} direction="left"/>
-            <Square accent={accent} delay={120} direction="left"/>
-            <Square accent={accent} delay={40} direction="left"/>
-            <Square accent={accent} delay={0} direction="left"/>
-        </Squares>
+        <Layout>
+            {sq}
+        </Layout>
     )
 }

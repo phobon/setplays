@@ -14,7 +14,7 @@ const Hover = styled.div`
     flex: none;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: space-between;
 
     &:after {
         content: "${props => props.illustration}";
@@ -22,17 +22,27 @@ const Hover = styled.div`
         bottom: 0;
         right: 0;
         font-size: 8rem;
-        transition-delay: 500ms;
+        transition-delay: 1s;
         opacity: 0;
         transition: opacity 180ms ease-out, transform 180ms ease-out;
         transform: translateY(2rem);
     }
+
+    &.hover--mouseover {
+        opacity: 1;
+        transform: translate(0);
+
+        &:after {
+            opacity: 1;
+            transform: translate(0);
+        }
+    }
 `;
 
 export default (props) => {
-    const { label, description, illustration } = props;
+    const { label, description, illustration, isMouseOver } = props;
     return (
-        <Hover illustration={illustration}>
+        <Hover illustration={illustration} className={isMouseOver ? "hover--mouseover" : ""}>
             <h1>{description}</h1>
             <h3>{label} ›</h3>
         </Hover>

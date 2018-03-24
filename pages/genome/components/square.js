@@ -1,19 +1,92 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-export default styled.li`
+const directions = ["left", "right", "up", "down"];
+const delays = [0, 50, 100, 150];
+
+const randomDelay = () => {
+    return delays[Math.floor(Math.random() * delays.length)];
+};
+const randomDirection = () => {
+    return directions[Math.floor(Math.random() * directions.length)];
+};
+
+const transform = (isMouseOver, direction) => {
+    if (isMouseOver) {
+        return "";
+    }
+
+    // Determine direction here.
+    switch (direction) {
+        case "left":
+        return "square--left";
+        case "right":
+        return "square--right";
+        case "up":
+        return "square--up";
+        case "down":
+        return "square--down";
+    }
+};
+
+const Layout = styled.li`
     width: 16rem;
     height: 16rem;
     overflow: hidden;
     position: relative;
-
+    
     &:before {
         content: "";
-        background-color: ${props => props.accent};
-        transition: transform 150ms cubic-bezier(.05,.82,.51,.99);
         width: 100%;
         height: 100%;
+        background-color: ${props => props.accent};
+        transition: transform 150ms cubic-bezier(.05,.82,.51,.99);
         position: absolute;
-        transition-delay: ${props => props.delay};
-        transform: translateX(-100%);
+        transition-delay: ${props => props.delay}ms;
+        transform: translate(0, 0);
+        left: 0;
+        top: 0;
+    }
+
+    /* Transition directions */
+    &.square--left {
+        &:before {
+            transform: translate(-100%, 0);
+        }
+    }
+    &.square--right {
+        &:before {
+            transform: translate(100%, 0);
+        }
+    }
+    &.square--up {
+        &:before {
+            transform: translate(0, -100%);
+        }
+    }
+    &.square--down {
+        &:before {
+            transform: translate(0, 100%);
+        }
     }
 `;
+
+export default class Square extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = { direction: randomDirection(), delay: randomDelay() };
+    }
+
+    componentWillReceiveProps(nextProps) {
+        const { isMouseOver } = nextProps;
+        if (!isMouseOver) {
+            this.setState({ direction: randomDirection() });
+        }
+    }
+
+    render() {
+        const { isMouseOver, accent } = this.props;
+        const { direction, delay } = this.state;
+        return <Layout delay={delay} accent={accent} className={transform(isMouseOver, direction)}/>
+    }
+}

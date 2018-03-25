@@ -7,8 +7,8 @@ import Hover from "./hover";
 
 const Layout = styled.li`
     position: relative;
-    width: 32rem;
-    height: 32rem;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex: none;
     align-items: center;

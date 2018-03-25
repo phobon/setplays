@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 const directions = ["left", "right", "up", "down"];
-const delays = [0, 50, 100, 150];
+const delays = [0, 100, 150, 200];
 
 const randomDelay = () => {
     return delays[Math.floor(Math.random() * delays.length)];
@@ -29,8 +29,8 @@ const transform = (isMouseOver, direction) => {
 };
 
 const Layout = styled.li`
-    width: 16rem;
-    height: 16rem;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
     position: relative;
     
@@ -39,12 +39,13 @@ const Layout = styled.li`
         width: 100%;
         height: 100%;
         background-color: ${props => props.accent};
-        transition: transform 150ms cubic-bezier(.05,.82,.51,.99);
+        transition: transform 300ms cubic-bezier(.05,.82,.51,.99);
         position: absolute;
         transition-delay: ${props => props.delay}ms;
         transform: translate(0, 0);
         left: 0;
         top: 0;
+        will-change: transform;
     }
 
     /* Transition directions */

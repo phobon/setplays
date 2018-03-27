@@ -72,15 +72,15 @@ const Illustrations = styled.div`
 
     &:before {
         content: "${props => props.first}";
-        bottom: -1rem;
-        right: 1rem;
+        bottom: 10%;
+        right: 5%;
         transition-delay: 200ms;
     }
 
     &:after {
         content: "${props => props.second}";
-        bottom: -5rem;
-        right: 10rem;
+        bottom: 0%;
+        right: 35%;
         transition-delay: 500ms;
     }
 

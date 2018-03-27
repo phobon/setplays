@@ -39,8 +39,8 @@ const genomeData = [
 const BoxList = styled.ul`
     align-self: center;
     display: grid;
-    grid-template-columns: repeat(3, calc(70vw / 3));
-    grid-auto-rows: calc(70vw / 3);
+    grid-template-columns: repeat(3, calc(60vw / 3));
+    grid-auto-rows: calc(60vw / 3);
 `;
 
 export default () => {

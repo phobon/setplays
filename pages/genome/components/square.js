@@ -39,7 +39,7 @@ const Layout = styled.li`
         width: 100%;
         height: 100%;
         background-color: ${props => props.accent};
-        transition: transform 300ms cubic-bezier(.05,.82,.51,.99);
+        transition: transform 250ms cubic-bezier(.05,.82,.51,.99);
         position: absolute;
         transition-delay: ${props => props.delay}ms;
         transform: translate(0, 0);

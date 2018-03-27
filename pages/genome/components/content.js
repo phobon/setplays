@@ -12,8 +12,8 @@ const Content = styled.div`
 
     &:before {
         content: "";
-        width: 2rem;
-        height: 2rem;
+        width: 1.3rem;
+        height: 1.3rem;
         background-color: ${props => props.accent};
         display: flex;
         flex: none;
@@ -24,23 +24,26 @@ const Content = styled.div`
     }
 
     h1 {
-        opacity: 0.8;
+        font-size: 3.5rem;
+        font-weight: 500;
 
         &:before {
             content: "${props => props.count}";
             position: absolute;
             left: -6rem;
             opacity: 0.2;
-            font-size: 90%;
+            font-size: 3rem;
+            z-index: -1;
         }
     }
 
     &:after {
         content: "Read ›";
         color: ${props => props.accent};
-        bottom: 3rem;
+        bottom: 5rem;
         position: absolute;
-        font-size: 115%;
+        font-size: 2rem;
+        font-weight: 500;
     }
 `;
 

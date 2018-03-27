@@ -41,7 +41,6 @@ const BoxList = styled.ul`
     display: grid;
     grid-template-columns: repeat(3, calc(70vw / 3));
     grid-auto-rows: calc(70vw / 3);
-    margin: 0 auto;
 `;
 
 export default () => {

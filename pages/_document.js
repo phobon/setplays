@@ -25,15 +25,7 @@ export default class CustomDocument extends Document {
             body {
                 font-size: 1.75rem;
             }
-            html, body, 
-            div, article, section, main, footer, header, 
-            form, fieldset, 
-            pre, code, 
-            p, 
-            ul, ol, li, 
-            dl, dt, dd, 
-            textarea, 
-            input[type="text"], input[type="tel"], input[type="email"], input[type="url"], input[type="password"] {
+            * {
                 box-sizing: border-box;
             }
             h1, h2, h3, h4, h5, h6, p {

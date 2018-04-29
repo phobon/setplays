@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "babel-eslint": "^8.2.2",
+    "babel-plugin-styled-components": "^1.5.1",
     "eslint": "^4.19.1",
     "next": "^5.1.0",
     "react": "^16.3.1",

@@ -1,8 +1,6 @@
 import React from "react";
-import styled from "styled-components";
 
-import { Box } from "../containers";
-import Image from "../images";
+import { Box, Image } from "base";
 
 const Avatar = ({ src }) => (
     <Box circle>

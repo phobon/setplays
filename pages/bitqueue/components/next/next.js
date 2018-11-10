@@ -1,10 +1,6 @@
 import React from "react";
-import styled from "styled-components";
 
-import { grayscale, colour } from "../../theme";
-
-import { Box, Flex } from "../containers";
-import Image from "../images";
+import { Box, Flex } from "base";
 
 const Next = ({ next }) => (
     <Flex fullWidth style={{ padding: "2rem" }}>
@@ -13,11 +9,11 @@ const Next = ({ next }) => (
         </svg>
 
         <Box flexDirection="column" align="flex-start" style={{ marginLeft: "1rem" }}>
-            <Box style={{ color: grayscale[1], fontSize: "14px" }}>Up Next</Box>
-            <Box style={{ color: grayscale[0], fontSize: "18px", fontWeight: 500 }}>{next.name}</Box>
+            <Box color="grayscale.1" fontSize={3}>Up Next</Box>
+            <Box color="grayscale.0" fontSize={3}>{next.name}</Box>
         </Box>
         <Flex justify="flex-end">
-            <Box style={{ color: colour.purple, fontSize: "14px" }}>{next.bits} bits</Box>
+            <Box color="purples.1" fontSize={3}>{next.bits} bits</Box>
         </Flex>
     </Flex>
 )

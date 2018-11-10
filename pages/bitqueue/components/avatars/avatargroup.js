@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-import { colour, grayscale } from "../../theme";
-
 const List = styled.ul`
     display: flex;
     flex: none;
@@ -22,7 +20,7 @@ const Bubble = styled.li`
     height: 5rem;
     border-radius: 100%;
     
-    background-color: ${props => grayscale[1]};
+    background-color: ${props => props.theme.colors.grayscale[1]};
     border: 0.5rem solid #FFF;
     transform: ${props => `translateX(-${props.index * 2}rem)`};
 `;

@@ -2,19 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import posed from "react-pose";
 
-import { Box, Flex } from "./components/containers";
-import Button from "./components/button";
-import { H3, H5 } from "./components/text";
+import { Box, Flex, Button, Heading } from "base";
 
 import Identity from "./components/identity";
 import { AvatarGroup } from "./components/avatars";
 
-import { grayscale, colour } from "./theme";
-
 import Next from "./components/next";
 import Status from "./components/status";
 
-const Layout = Box.extend`
+const Layout = styled(Box)`
     width: 320px;
     height: 300px;
 `;
@@ -43,15 +39,15 @@ class BitQueue extends React.Component {
 
             {/* Header */}
             <Box fullWidth style={{ padding: "2rem" }}>
-                <Identity colour={colour.red} />
+                <Identity color="reds.3" />
                 <Flex/>
                 <Button disabled={hasJoined} onClick={() => this.setState({ hasJoined: true })}>{hasJoined ? "You're in!" : "Join Queue"}</Button>
             </Box>
 
             {/* Title and details */}
             <Box flexDirection="column" align="flex-start" fullWidth style={{ padding: "0 2rem" }}>
-                <H3 style={{ color: grayscale[0] }}>{name}</H3>
-                <H5 style={{ color: colour.yellow }}>{queueType}</H5>
+                <Heading.H3 color="grayscale.1">{name}</Heading.H3>
+                <Heading.H5 color="oranges.3">{queueType}</Heading.H5>
             </Box>
 
             {/* Up next */}

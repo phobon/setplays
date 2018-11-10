@@ -1,2 +1,2 @@
-import Genome from "./genome";
+import Genome from "./Genome";
 export { Genome }

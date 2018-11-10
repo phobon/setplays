@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-import Content from "./content";
-import Squares from "./squares";
-import Hover from "./hover";
+import Content from "./Content";
+import Squares from "./Squares";
+import Hover from "./Hover";
 
 const Layout = styled.li`
     position: relative;

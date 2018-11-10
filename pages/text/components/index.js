@@ -1,2 +1,2 @@
-import Block from "./block";
+import Block from "./Block";
 export default Block;

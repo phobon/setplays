@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import Square from "./square";
+import Square from "./Square";
 
 const Layout = styled.ul`
     pointer-events: none;

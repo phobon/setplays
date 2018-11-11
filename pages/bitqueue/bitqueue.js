@@ -38,14 +38,14 @@ class BitQueue extends React.Component {
             <Status isOpen={isOpen} />
 
             {/* Header */}
-            <Box fullWidth style={{ padding: "2rem" }}>
+            <Box fullWidth p={4}>
                 <Identity color="reds.3" />
                 <Flex/>
                 <Button disabled={hasJoined} onClick={() => this.setState({ hasJoined: true })}>{hasJoined ? "You're in!" : "Join Queue"}</Button>
             </Box>
 
             {/* Title and details */}
-            <Box flexDirection="column" align="flex-start" fullWidth style={{ padding: "0 2rem" }}>
+            <Box flexDirection="column" align="flex-start" fullWidth px={4}>
                 <Heading.H3 color="grayscale.1">{name}</Heading.H3>
                 <Heading.H5 color="oranges.3">{queueType}</Heading.H5>
             </Box>

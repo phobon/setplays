@@ -8,6 +8,7 @@
     "react": "^16.7.0-alpha.2",
     "react-dom": "^16.7.0-alpha.2",
     "react-pose": "^4.0.1",
+    "rmdi": "^1.0.1",
     "styled-components": "^4.1.1",
     "styled-system": "^3.1.11"
   },

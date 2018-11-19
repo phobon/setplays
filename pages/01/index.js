@@ -1,6 +1,6 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import { Grid, Box, Image, Heading, Text, Link } from 'base';
+import { Grid, Box, Image, Text, Link } from 'base';
 
 import Apps from 'rmdi/lib/Apps';
 import KeyboardBackspace from 'rmdi/lib/KeyboardBackspace';
@@ -48,7 +48,7 @@ const Dxpe = styled(Text)`
   }
 `;
 
-const One = (props) => {
+const One = () => {
   const menu = menuItems.map((m, i) => (
     <CustomLink key={m} current={i === 0}>
       {m}
@@ -124,6 +124,6 @@ const One = (props) => {
     
     </Grid>
   );
-}
+};
 
 export default One;

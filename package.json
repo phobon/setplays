@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@now/build-utils": "^0.4.29",
     "@now/next": "^0.0.79",
     "babel-eslint": "^10.0.1",
     "babel-plugin-styled-components": "^1.8.0",

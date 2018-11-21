@@ -48,6 +48,11 @@ const Dxpe = styled(Text)`
   }
 `;
 
+const RotatedBox = styled(Box)`
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+`;
+
 const One = () => {
   const menu = menuItems.map((m, i) => (
     <CustomLink key={m} current={i === 0}>
@@ -55,10 +60,6 @@ const One = () => {
     </CustomLink>
   ));
 
-  const RotatedBox = styled(Box)`
-    transform: rotate(-90deg);
-    transform-origin: 50% 50%;
-  `;
   const social = socialItems.map(s => (
     <CustomLink key={s}>
       {s}

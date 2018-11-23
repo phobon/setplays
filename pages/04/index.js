@@ -70,7 +70,7 @@ RadialBox.defaultProps = {
 const overflowStyles = { overflow: 'hidden', position: 'relative' };
 
 const Four = () => (
-  <Grid cover gridTemplateRows="repeat(auto-fill, 100px)" gridTemplateColumns="repeat(auto-fill, 100px)">
+  <Grid cover gridTemplateRows="repeat(10, 1fr)" gridTemplateColumns="repeat(auto-fill, calc(100vh / 10))">
     <SplitGradientBox cover gridArea="1 / 2 / span 6 / span 6" left="-50%" transform="rotate(90deg)" colour1="rgba(234, 176, 162)" colour2="rgba(44, 65, 84)" />
     
     <RadialBox cover gridArea="1 / 1 / span 4 / span 4" colour1="rgba(226, 226, 226)" colour2="rgba(199, 225, 212)"/>

@@ -6,7 +6,7 @@ import ChevronRight from 'rmdi/lib/ChevronRight';
 import KeyboardBackspace from 'rmdi/lib/KeyboardBackspace';
 import DragHandle from 'rmdi/lib/DragHandle';
 
-import { Grid, Image, Box, Flex, Text } from 'base';
+import { Grid, Image, Box, Flex, Text } from '@phobon/base';
 
 const RotatedText = styled(Text)`
   transform: rotate(90deg);
@@ -21,24 +21,24 @@ const Chevron = ({ children, ...props }) => (
 
 const Three = () => (
   <Grid
-    cover
+    fullWidth fullHeight
     gridTemplateColumns="repeat(24, 1fr)"
     gridTemplateRows="repeat(7, 1fr)">
 
-    <Image cover src="https://source.unsplash.com/random" cover gridArea="1 / 1 / 8 / 25" />
+    <Image fullWidth fullHeight src="https://source.unsplash.com/random" fullWidth fullHeight gridArea="1 / 1 / 8 / 25" />
 
-     <Box cover gridArea="1 / 2 / span 1 / span 2" justifyContent="flex-start">
+     <Box fullWidth fullHeight gridArea="1 / 2 / span 1 / span 2" justifyContent="flex-start">
       <Text color="white" fontWeight="bold">NEXT VISIT</Text>
     </Box>
 
-    <Box cover gridArea="1 / 8 / span 1 / 18" justifyContent="space-around">
+    <Box fullWidth fullHeight gridArea="1 / 8 / span 1 / 18" justifyContent="space-around">
       <Text color="white" fontSize={0}>HOME</Text>
       <Text color="white" fontSize={0}>DESTINATIONS</Text>
       <Text color="white" fontSize={0}>GALLERIES</Text>
       <Text color="white" fontSize={0}>SUBMIT</Text>
     </Box>
 
-    <Box cover gridArea="3 / 1 / span 2 / span 2" flexDirection="column">
+    <Box fullWidth fullHeight gridArea="3 / 1 / span 2 / span 2" flexDirection="column">
       <Text color="white" mb={2} fontWeight="bold">01</Text>
       <Flex width={4} bg="white" borderRadius={4} mb={2} />
       <Text color="grayscale.5" mb={2}>02</Text>
@@ -46,13 +46,13 @@ const Three = () => (
       <Text color="grayscale.5">04</Text>
     </Box>
 
-    <Box cover gridArea="3 / 5 / span 3 / span 11" flexDirection="column" alignItems="flex-start" justifyContent="flex-start">
+    <Box fullWidth fullHeight gridArea="3 / 5 / span 3 / span 11" flexDirection="column" alignItems="flex-start" justifyContent="flex-start">
       <Text fontSize="96px" fontWeight="bold" color="white" lineHeight="96px">Pay a</Text>
       <Text fontSize="96px" fontWeight="bold" color="white" lineHeight="96px">visit to the</Text>
       <Text fontSize="96px" fontWeight="bold" color="white" lineHeight="96px">Faroe Islands</Text>
     </Box>
 
-    <Box cover gridArea="3 / 17 / span 1 / span 4">
+    <Box fullWidth fullHeight gridArea="3 / 17 / span 1 / span 4">
       <Chevron mr={3}>
         <ChevronLeft color="white" />
       </Chevron>
@@ -61,24 +61,24 @@ const Three = () => (
       </Chevron>
     </Box>
 
-    <Box flexDirection="column" cover gridArea="7 / 5 / span 1 / span 4" alignItems="flex-start">
+    <Box flexDirection="column" fullWidth fullHeight gridArea="7 / 5 / span 1 / span 4" alignItems="flex-start">
       <Text color="white" fontWeight="bold">18 different islands</Text>
       <Text color="grayscale.6">With splendid nature</Text>
     </Box>
 
-    <Box flexDirection="column" cover gridArea="7 / 11 / span 1 / span 4" alignItems="flex-start">
+    <Box flexDirection="column" fullWidth fullHeight gridArea="7 / 11 / span 1 / span 4" alignItems="flex-start">
       <Text color="white" fontWeight="bold">A lot of hidden gems</Text>
       <Text color="grayscale.6">And places less visited</Text>
     </Box>
 
-    <Box cover gridArea="1 / 23 / span 1 / span 2">
+    <Box fullWidth fullHeight gridArea="1 / 23 / span 1 / span 2">
       <DragHandle color="white" />
     </Box>
 
-    <Box cover gridArea="4 / 23 / span 3 / span 2" bg="grayscale.6">
+    <Box fullWidth fullHeight gridArea="4 / 23 / span 3 / span 2" bg="grayscale.6">
       <RotatedText>Explore</RotatedText>
     </Box>
-    <Box gridArea="7 / 23 / span 1 / span 2" bg="grayscale.5" cover>
+    <Box gridArea="7 / 23 / span 1 / span 2" bg="grayscale.5" fullWidth fullHeight>
       <KeyboardBackspace style={{ transform: "rotate(-90deg)" }} />
     </Box>
   </Grid>

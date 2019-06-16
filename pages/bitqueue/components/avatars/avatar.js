@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Box, Image } from "base";
+import { Box, Image } from "@phobon/base";
 
 const Avatar = ({ src }) => (
     <Box circle>

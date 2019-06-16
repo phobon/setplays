@@ -1,5 +1,7 @@
 {
   "version": 2,
+  "name": "setplays",
+  "alias": ["phobon.io/setplays", "www.phobon.io/setplays"],
   "builds": [
     { "src": "next.config.js", "use": "@now/next" }
   ]

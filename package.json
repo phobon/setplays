@@ -1,18 +1,19 @@
 {
   "dependencies": {
-    "@now/build-utils": "^0.4.29",
-    "@now/next": "^0.0.79",
+    "@now/build-utils": "^0.5.7",
+    "@now/next": "^0.4.1",
+    "@phobon/base": "^2.2.5",
+    "@phobon/grimoire": "^0.8.0",
     "babel-eslint": "^10.0.1",
-    "babel-plugin-styled-components": "^1.8.0",
-    "base": "https://github.com/phobon/base.git",
-    "eslint": "^5.9.0",
-    "next": "^7.0.2",
-    "react": "^16.7.0-alpha.2",
-    "react-dom": "^16.7.0-alpha.2",
-    "react-pose": "^4.0.1",
+    "babel-plugin-styled-components": "^1.10.1",
+    "eslint": "^5.16.0",
+    "next": "^8.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-spring": "^9.0.0-beta.21",
     "rmdi": "^1.0.1",
-    "styled-components": "^4.1.1",
-    "styled-system": "^3.1.11"
+    "styled-components": "^5.0.0-beta.1",
+    "styled-system": "^5.0.6"
   },
   "scripts": {
     "dev": "next",

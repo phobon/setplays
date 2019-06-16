@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Grid, Box, Flex, Card, Text, Image, Link } from 'base';
+import { Grid, Box, Flex, Card, Text, Image, Link } from '@phobon/base';
 
 import Share from 'rmdi/lib/Share';
 import ChevronLeft from 'rmdi/lib/ChevronLeft';
@@ -58,33 +58,33 @@ const Two = () => {
     <Grid
       gridTemplateColumns="repeat(20, 1fr)"
       gridTemplateRows="repeat(16, 1fr)"
-      cover>
+      fullWidth fullHeight>
 
-      <Image cover src="https://source.unsplash.com/random" gridArea="1 / 1 / 17 / span 14" />
+      <Image fullWidth fullHeight src="https://source.unsplash.com/random" gridArea="1 / 1 / 17 / span 14" />
 
-      <RotatedBox gridArea="1 / 1 / span 3 / span 3" cover>
+      <RotatedBox gridArea="1 / 1 / span 3 / span 3" fullWidth fullHeight>
         <Text fontWeight="bold" color="white" fontSize={4}>PYRAMID</Text>
       </RotatedBox>
 
-      <Box gridArea="7 / 1 / 11 / span 3" cover flexDirection="column">
+      <Box gridArea="7 / 1 / 11 / span 3" fullWidth fullHeight flexDirection="column">
         <RotatedText color="white">03</RotatedText>
         <Bar my={3} />
         <RotatedText color="white">02</RotatedText>
       </Box>
 
-      <Box gridArea="15 / 1 / span 3 / span 3" cover>
+      <Box gridArea="15 / 1 / span 3 / span 3" fullWidth fullHeight>
         <Box round bg="reds.3" width={64} height={64}>
           <Add color="white" />
         </Box>
       </Box>
 
-      <Box gridArea="1 / 18 / 3 / 21" cover>
+      <Box gridArea="1 / 18 / 3 / 21" fullWidth fullHeight>
         <ShoppingBasket />
       </Box>
-      <Box cover gridArea="7 / 18 / 11 / 21" justifyContent="space-between" flexDirection="column">
+      <Box fullWidth fullHeight gridArea="7 / 18 / 11 / 21" justifyContent="space-between" flexDirection="column">
         {social}
       </Box>
-      <Box gridArea="15 / 18 / 17 / 21" cover>
+      <Box gridArea="15 / 18 / 17 / 21" fullWidth fullHeight>
         <Share />
       </Box>
 
@@ -92,7 +92,7 @@ const Two = () => {
         <ChevronLeft color="white" />
         <ChevronRight color="white" ml={3} />
       </Box>
-      <Card gridArea="3 / 13 / 15 / 17" cover borderRadius={0} flexDirection="column" alignItems="flex-start" p={4}>
+      <Card gridArea="3 / 13 / 15 / 17" fullWidth fullHeight borderRadius={0} flexDirection="column" alignItems="flex-start" p={4}>
         <Text fontWeight="bold" fontSize={5} mb={3}>02</Text>
 
         <Flex alignItems="flex-start" fullWidth>

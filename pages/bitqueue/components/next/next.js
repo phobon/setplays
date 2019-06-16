@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Box, Flex } from "base";
+import { Box, Flex } from "@phobon/base";
 
 const Next = ({ next }) => (
     <Flex fullWidth style={{ padding: "2rem" }}>

@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import posed from "react-pose";
 
-import { Box, Flex, Button, Heading } from "base";
+import { Box, Flex, Heading } from "@phobon/base";
+import { Button } from "@phobon/grimoire";
 
 import Identity from "./components/identity";
 import { AvatarGroup } from "./components/avatars";

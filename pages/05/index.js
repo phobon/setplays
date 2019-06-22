@@ -144,17 +144,17 @@ const Five = () => (
       
       <Grid
         flex={1}
-        gridTemplateColumns="auto 1fr"
+        gridTemplateColumns="auto auto 1fr"
         gridTemplateRows="1fr 1fr auto 1fr auto"
         pl={3}
         gridGap={2}>
         <Text gridArea="1 / 1 / span 1 / span 1" fontSize={0} css={{ alignSelf: 'flex-start' }}>09:00</Text>
         <Text gridArea="4 / 1 / span 1 / span 1" fontSize={0} css={{ alignSelf: 'flex-start' }}>10:00</Text>
-        <Indicator gridArea="3 / 2 / span 1 / span 1" />
+        <Indicator gridArea="3 / 2 / span 1 / span 2" />
         {calendar.map(({ id, indicator, ...c }, i) => !indicator && (
           <CalendarEntry
             key={`calendar__${id}`}
-            gridArea={`${i + 1} / 2 / span 1 / span 1`}
+            gridArea={`${i + 1} / 3 / span 1 / span 1`}
             {...c} />
         ))}
       </Grid>

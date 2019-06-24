@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Box, Card, Grid, Text, Image, Vector } from '@phobon/base';
-import { Spacer, Tag } from '@phobon/grimoire';
 
 import Add from 'rmdi/lib/Add';
 

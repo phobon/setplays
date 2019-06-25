@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Grid, Box, Image, Text, Link } from '@phobon/base';
+import { Grid, Box, Text, Link } from '@phobon/base';
 
 import HotTub from 'rmdi/lib/HotTub';
 

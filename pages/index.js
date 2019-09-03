@@ -9,7 +9,7 @@ export default () => {
   const sources = useApi('api/sources');
   return (
     <Stack space={3} alignItems='flex-start'>
-      {sources.map(({ key, source, ...rest }) => (
+      {sources.map(({ key, source }) => (
         <Link key={key} href={`/${key}`} title={source} passHref>
           <BaseLink>{source}</BaseLink>
         </Link>

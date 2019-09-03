@@ -121,7 +121,7 @@ const CalendarItem = ({ date, day, pips, selected, ...props }) => (
     {...props}>
     <Text color="inherit" fontSize={2}>{date}</Text>
     <Text color="inherit" fontSize={0} mb={2}>{day}</Text>
-    <BoxList css={`> * + * { margin-left: 4px; }`}>
+    <BoxList flexDirection="row" space={2}>
       {pips.map(p => (
         <BoxListItem key={`pip__${date}__${p}`}>
           <Box width={4} height={4} bg={`${p}.6`} round />
@@ -170,7 +170,7 @@ const Six = () => (
         </Box>
 
         <Box fullWidth overflow="hidden" position="relative" height={82} mb={5}>
-          <BoxList css={`> * + * { margin-left: 8px; }`} left={32} position="absolute">
+          <BoxList flexDirection="row" space={3} left={32} position="absolute">
             {calendar.map(({ id, ...c }) => (
               <BoxListItem key={`calendaritem__${id}`}>
                 <CalendarItem {...c} />
@@ -183,7 +183,7 @@ const Six = () => (
       </Card>
 
       <Box fullWidth overflow="hidden" position="relative" height={42} mb={5}>
-        <BoxList css={`> * + * { margin-left: 8px; }`} left={42} position="absolute">
+        <BoxList flexDirection="row" space={3} left={42} position="absolute">
           {tags.map(t => (
             <BoxListItem key={`tag__${t.label}`}>
               <Tag {...t} />

@@ -1,23 +1,32 @@
 {
-  "dependencies": {
-    "@now/build-utils": "^0.5.7",
-    "@now/next": "^0.4.1",
-    "@phobon/base": "^2.2.5",
-    "@phobon/grimoire": "^0.8.0",
-    "babel-eslint": "^10.0.1",
-    "babel-plugin-styled-components": "^1.10.1",
-    "eslint": "^5.16.0",
-    "next": "^8.1.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-spring": "^9.0.0-beta.21",
-    "rmdi": "^1.0.1",
-    "styled-components": "^5.0.0-beta.1",
-    "styled-system": "^5.0.6"
-  },
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "storybook": "start-storybook -p 9000"
+  },
+  "dependencies": {
+    "@mdx-js/loader": "latest",
+    "@next/mdx": "latest",
+    "@phobon/base": "latest",
+    "@phobon/grimoire": "latest",
+    "framer-motion": "latest",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-spring": "^9.0.0-beta.33",
+    "rmdi": "latest",
+    "styled-components": "beta",
+    "styled-system": "latest"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@storybook/addon-a11y": "next",
+    "@storybook/addon-actions": "next",
+    "@storybook/addon-knobs": "next",
+    "@storybook/addons": "next",
+    "@storybook/react": "next",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-styled-components": "latest"
   }
 }

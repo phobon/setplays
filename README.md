@@ -1,2 +1,3 @@
-# setplays
-Creative coding and exploration experiments
+# Set Plays
+
+Creative coding, explorations and experiments

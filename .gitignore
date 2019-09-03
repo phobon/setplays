@@ -1,15 +1,3 @@
-.DS_Store
-node_modules/
-dist/
-npm-debug.log
+node_modules
+.next
 yarn-error.log
-.next/
-
-# Editor directories and files
-.idea
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-
-out/

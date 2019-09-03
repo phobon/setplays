@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Card, Grid, Text } from '@phobon/base';
+import { Stack, Box, Card, Grid, Text } from '@phobon/base';
 import { Spacer } from '@phobon/grimoire';
 
 const dates = [
@@ -83,11 +83,11 @@ const Day = ({ label, day, pips, active, ...props }) => (
     <Box width={32} height={32} round bg={active ? 'greens.9' : 'transparent'}>
       <Text fontSize={0}>{day}</Text>
     </Box>
-    <Box height={3} css={`> * + * { margin-left: 4px; }`}>
+    <Stack height={3} flexDirection="row" space={2}>
       {pips && pips.map(p => (
         <Box key={`${label}__${p}`} width={3} height={3} bg={`${p}.8`} />
       ))}
-    </Box>
+    </Stack>
   </Box>
 );
 

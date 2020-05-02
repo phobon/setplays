@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Grid, Box, Flex, Card, Text, Image, Link } from '@phobon/base';
+import { Grid, Box, Card, Text, Image, Link } from '@phobon/base';
 
 import Share from 'rmdi/lib/Share';
 import ChevronLeft from 'rmdi/lib/ChevronLeft';
@@ -27,7 +27,7 @@ const RotatedText = styled(Text)`
   transform-origin: 50% 50%;
 `;
 
-const Bar = styled(Flex)`
+const Bar = styled(Box)`
   background-color: ${props => props.theme.colors.grayscale[2]};
   width: ${props => props.theme.space[1]}px;
   position: relative;
@@ -68,7 +68,7 @@ const Two = () => {
 
       <Box gridArea="7 / 1 / 11 / span 3" fullWidth fullHeight flexDirection="column">
         <RotatedText color="white">03</RotatedText>
-        <Bar my={3} />
+        <Bar flex={1} my={3} />
         <RotatedText color="white">02</RotatedText>
       </Box>
 
@@ -95,9 +95,9 @@ const Two = () => {
       <Card gridArea="3 / 13 / 15 / 17" fullWidth fullHeight borderRadius={0} flexDirection="column" alignItems="flex-start" p={4}>
         <Text fontWeight="bold" fontSize={5} mb={3}>02</Text>
 
-        <Flex alignItems="flex-start" fullWidth>
+        <Box flex={1} alignItems="flex-start" fullWidth>
           <Text fontWeight="bold" fontSize="42px">Ginger Weiss & Lime</Text>
-        </Flex>
+        </Box>
         
         <Text fontWeight="bold" fontSize={2}>Details</Text>
       </Card>

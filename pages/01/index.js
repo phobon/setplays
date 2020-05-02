@@ -70,7 +70,8 @@ const One = () => {
     <Grid
       gridTemplateColumns="repeat(20, 1fr)"
       gridTemplateRows="repeat(16, 1fr)"
-      fullWidth fullHeight
+      fullWidth
+      fullHeight
       bg="grayscale.6">
       {/* Hero image */}
       <Image fullWidth fullHeight src="https://source.unsplash.com/random" gridArea="1 / 11 / span 16 / span 11" />

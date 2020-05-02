@@ -3,7 +3,7 @@ import { ServerStyleSheet } from 'styled-components';
 
 import GlobalStyles from './GlobalStyles';
 
-export default class TelestoDocument extends Document {
+export default class SetPlaysDocument extends Document {
   static async getInitialProps (ctx) {
     const sheet = new ServerStyleSheet()
     const originalRenderPage = ctx.renderPage
@@ -12,10 +12,10 @@ export default class TelestoDocument extends Document {
       ctx.renderPage = () =>
         originalRenderPage({
           enhanceApp: App => props => sheet.collectStyles(
-            <React.Fragment>
+            <>
               <GlobalStyles />
               <App {...props} />
-            </React.Fragment>
+            </>
           )
         })
 

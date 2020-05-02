@@ -6,6 +6,8 @@ import { theme } from '@phobon/base';
 
 import { MDXProvider } from '@mdx-js/react';
 
+import Layout from '../components/Layout';
+
 const components = {
   // Map components as required here. Move this to local state to update
   // at runtime, which may not really be needed
@@ -13,7 +15,7 @@ const components = {
 
 export default class SetPlaysApp extends App {
   render () {
-    const { Component, pageProps } = this.props
+    const { Component, pageProps, router } = this.props;
     return (
       <>
         <Head>
@@ -38,7 +40,9 @@ export default class SetPlaysApp extends App {
         </Head>
         <ThemeProvider theme={theme}>
           <MDXProvider components={components}>
-            <Component {...pageProps} />
+            <Layout pathname={router.pathname}>
+              <Component {...pageProps} />
+            </Layout>
           </MDXProvider>
         </ThemeProvider>
       </>

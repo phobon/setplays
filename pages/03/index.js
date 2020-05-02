@@ -6,7 +6,7 @@ import ChevronRight from 'rmdi/lib/ChevronRight';
 import KeyboardBackspace from 'rmdi/lib/KeyboardBackspace';
 import DragHandle from 'rmdi/lib/DragHandle';
 
-import { Grid, Image, Box, Flex, Text } from '@phobon/base';
+import { Grid, Image, Box, Text } from '@phobon/base';
 
 const RotatedText = styled(Text)`
   transform: rotate(90deg);
@@ -40,7 +40,7 @@ const Three = () => (
 
     <Box fullWidth fullHeight gridArea="3 / 1 / span 2 / span 2" flexDirection="column">
       <Text color="white" mb={2} fontWeight="bold">01</Text>
-      <Flex width={4} bg="white" borderRadius={4} mb={2} />
+      <Box flex={1} width={4} bg="white" borderRadius={4} mb={2} />
       <Text color="grayscale.5" mb={2}>02</Text>
       <Text color="grayscale.5" mb={2}>03</Text>
       <Text color="grayscale.5">04</Text>

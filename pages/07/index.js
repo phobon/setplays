@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Box, Card, BoxList, BoxListItem, Text } from '@phobon/base';
+import { Box, Card, Text } from '@phobon/base';
 import { Spacer } from '@phobon/grimoire';
 
 import Add from 'rmdi/lib/Add';
@@ -121,13 +121,13 @@ const CalendarItem = ({ date, day, pips, selected, ...props }) => (
     {...props}>
     <Text color="inherit" fontSize={2}>{date}</Text>
     <Text color="inherit" fontSize={0} mb={2}>{day}</Text>
-    <BoxList flexDirection="row" space={2}>
+    <Box as="ul" flexDirection="row" space={2}>
       {pips.map(p => (
-        <BoxListItem key={`pip__${date}__${p}`}>
+        <Box as="li" key={`pip__${date}__${p}`}>
           <Box width={4} height={4} bg={`${p}.6`} round />
-        </BoxListItem>
+        </Box>
       ))}
-    </BoxList>
+    </Box>
   </Box>
 );
 
@@ -170,37 +170,37 @@ const Six = () => (
         </Box>
 
         <Box fullWidth overflow="hidden" position="relative" height={82} mb={5}>
-          <BoxList flexDirection="row" space={3} left={32} position="absolute">
+          <Box as="ul" flexDirection="row" space={3} left={32} position="absolute">
             {calendar.map(({ id, ...c }) => (
-              <BoxListItem key={`calendaritem__${id}`}>
+              <Box as="li" key={`calendaritem__${id}`}>
                 <CalendarItem {...c} />
-              </BoxListItem>
+              </Box>
             ))}
-          </BoxList>
+          </Box>
         </Box>
 
         <Spacer direction="horizontal" thickness="4px" width="15%" bg="grayscale.7" mb={3} />
       </Card>
 
       <Box fullWidth overflow="hidden" position="relative" height={42} mb={5}>
-        <BoxList flexDirection="row" space={3} left={42} position="absolute">
+        <Box as="ul" flexDirection="row" space={3} left={42} position="absolute">
           {tags.map(t => (
-            <BoxListItem key={`tag__${t.label}`}>
+            <Box as="li" key={`tag__${t.label}`}>
               <Tag {...t} />
-            </BoxListItem>
+            </Box>
           ))}
-        </BoxList>
+        </Box>
       </Box>
 
       <SuperText ml={5} mb={3} superText={5} fontSize={5} color="grayscale.3">Schedule</SuperText>
 
-      <BoxList flexDirection="column" fullWidth css={`li:last-child span:last-child { background: transparent; }`}>
+      <Box as="ul" flexDirection="column" fullWidth css={`li:last-child span:last-child { background: transparent; }`}>
         {schedule.map(s => (
-          <BoxListItem fullWidth key={`schedule-item__${s.id}`} flexDirection="column" zIndex={1} ml={s.selected ? -6 : 0}>
+          <Box as="li" fullWidth key={`schedule-item__${s.id}`} flexDirection="column" zIndex={1} ml={s.selected ? -6 : 0}>
             <ScheduleItem {...s} />
-          </BoxListItem>
+          </Box>
         ))}
-      </BoxList>
+      </Box>
 
       <FadeBox position="absolute" alignItems="flex-end" zIndex={1} bottom={0} left={0} fullWidth height={96} borderRadius="0px 0px 30px 30px">
         <Spacer direction="horizontal" thickness="4px" width="25%" bg="grayscale.7" mb={3} />

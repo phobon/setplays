@@ -4,11 +4,10 @@ const GlobalStyles = createGlobalStyle`
   :root, body {
     width: 100%;
     height: 100%;
-
     margin: 0;
     padding: 0;
-
     font-size: 8px;
+    background-color: var(--c-background, hsl(0, 0%, 100%));
   }
 
   body {
@@ -32,7 +31,6 @@ const GlobalStyles = createGlobalStyle`
   ul {
     margin: 0;
     padding: 0;
-    list-style-type: none;
   }
 
   code,
@@ -76,8 +74,6 @@ const GlobalStyles = createGlobalStyle`
   pre,
   form,
   fieldset {
-    margin: 0;
-    padding: 0;
   }
 
   img,
@@ -85,9 +81,20 @@ const GlobalStyles = createGlobalStyle`
     border: 0;
   }
 
+  figure {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+  }
+
   #__next {
     width: 100%;
     height: 100%;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    align-items: center;
   }
 `;
 

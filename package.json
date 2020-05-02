@@ -1,32 +1,38 @@
 {
+  "name": "setplays",
+  "version": "0.1.0",
   "scripts": {
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "storybook": "start-storybook -p 9000"
+    "storybook": "start-storybook"
   },
   "dependencies": {
-    "@mdx-js/loader": "latest",
-    "@next/mdx": "latest",
-    "@phobon/base": "latest",
-    "@phobon/grimoire": "latest",
-    "framer-motion": "latest",
-    "next": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "react-spring": "^9.0.0-beta.33",
-    "rmdi": "latest",
-    "styled-components": "beta",
-    "styled-system": "latest"
+    "@mdx-js/loader": "^1.5.8",
+    "@next/mdx": "^9.3.5",
+    "@phobon/base": "^2.6.2",
+    "@phobon/grimoire": "^0.12.1",
+    "@phobon/hooks": "^1.1.1",
+    "framer-motion": "^2.0.0-beta.50",
+    "isomorphic-unfetch": "^3.0.0",
+    "js-cookie": "^2.2.1",
+    "next": "^9.3.5",
+    "next-compose-plugins": "^2.2.0",
+    "next-cookies": "^2.0.3",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "rmdi": "^1.0.1",
+    "styled-components": "^5.1.0",
+    "styled-system": "^5.1.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@storybook/addon-a11y": "next",
-    "@storybook/addon-actions": "next",
-    "@storybook/addon-knobs": "next",
-    "@storybook/addons": "next",
-    "@storybook/react": "next",
-    "babel-loader": "^8.0.6",
-    "babel-plugin-styled-components": "latest"
+    "@babel/core": "^7.9.0",
+    "@storybook/addon-a11y": "^5.3.18",
+    "@storybook/addon-actions": "^5.3.18",
+    "@storybook/addons": "^5.3.18",
+    "@storybook/react": "^5.3.18",
+    "@storybook/theming": "^5.3.18",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-styled-components": "^1.10.7"
   }
 }

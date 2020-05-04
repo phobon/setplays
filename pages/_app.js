@@ -3,6 +3,7 @@ import App from 'next/app';
 import Head from 'next/head';
 import { ThemeProvider } from 'styled-components';
 import { theme } from '@phobon/base';
+import { AnimatePresence } from 'framer-motion';
 
 import { MDXProvider } from '@mdx-js/react';
 
@@ -41,7 +42,9 @@ export default class SetPlaysApp extends App {
         <ThemeProvider theme={theme}>
           <MDXProvider components={components}>
             <Layout pathname={router.pathname}>
-              <Component {...pageProps} />
+              <AnimatePresence exitBeforeEnter>
+                <Component {...pageProps} key={router.route} />
+              </AnimatePresence>
             </Layout>
           </MDXProvider>
         </ThemeProvider>

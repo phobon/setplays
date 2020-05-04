@@ -1,10 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Grid, Box, Image, Text, Link } from '@phobon/base';
+import { motion } from 'framer-motion';
 
 import Apps from 'rmdi/lib/Apps';
 import KeyboardBackspace from 'rmdi/lib/KeyboardBackspace';
 import Search from 'rmdi/lib/Search';
+
+import MotionContainer from '../../components/MotionContainer';
 
 const menuItems = [
   'Lookbook', 'Men', 'Women'
@@ -67,64 +70,66 @@ const One = () => {
   ));
 
   return (
-    <Grid
-      gridTemplateColumns="repeat(20, 1fr)"
-      gridTemplateRows="repeat(16, 1fr)"
-      fullWidth
-      fullHeight
-      bg="grayscale.6">
-      {/* Hero image */}
-      <Image fullWidth fullHeight src="https://source.unsplash.com/random" gridArea="1 / 11 / span 16 / span 11" />
+    <MotionContainer>
+      <Grid
+        gridTemplateColumns="repeat(20, 1fr)"
+        gridTemplateRows="repeat(16, 1fr)"
+        fullWidth
+        fullHeight
+        bg="grayscale.6">
+        {/* Hero image */}
+        <Image fullWidth fullHeight src="https://source.unsplash.com/random" gridArea="1 / 11 / span 16 / span 11" />
 
-      {/* Hamburder-style menu */}
-      <Box fullWidth fullHeight gridArea="1 / 1 / span 2 / span 2" bg="white">
-        <Apps />
-      </Box>
-
-      {/* Main menu */}
-      <Box as="nav" gridArea="1 / 4 / span 2 / span 4" justifyContent="space-between">
-        {menu}
-      </Box>
-
-      <Box fullWidth fullHeight gridArea="1 / 11 / span 2 / span 2" justifyContent="flex-end">
-        <Box alignItems="baseline">
-          <Text fontSize={2} color="white" fontWeight="bold">01</Text>
-          <Text fontSize={0} color="grayscale.6">/03</Text>
+        {/* Hamburder-style menu */}
+        <Box fullWidth fullHeight gridArea="1 / 1 / span 2 / span 2" bg="white">
+          <Apps />
         </Box>
-      </Box>
 
-      <Box fullWidth fullHeight gridArea="1 / 19 / span 2 / span 2">
-        <Search color="white" />
-      </Box>
+        {/* Main menu */}
+        <Box as="nav" gridArea="1 / 4 / span 2 / span 4" justifyContent="space-between">
+          {menu}
+        </Box>
 
-      {/* Social */}
-      <RotatedBox fullWidth fullHeight gridArea="8 / 1 / 10 / span 2" justifyContent="space-between">
-        {social}
-      </RotatedBox>
+        <Box fullWidth fullHeight gridArea="1 / 11 / span 2 / span 2" justifyContent="flex-end">
+          <Box alignItems="baseline">
+            <Text fontSize={2} color="white" fontWeight="bold">01</Text>
+            <Text fontSize={0} color="grayscale.6">/03</Text>
+          </Box>
+        </Box>
 
-      {/* Red bubble */}
-      <Box fullWidth fullHeight gridArea="15 / 1 / span 2 / span 2">
-        <Box round bg="reds.2" width={64} height={64} />
-      </Box>
+        <Box fullWidth fullHeight gridArea="1 / 19 / span 2 / span 2">
+          <Search color="white" />
+        </Box>
 
-      {/* Button */}
-      <Box fullWidth fullHeight gridArea="15 / 4 / span 2 / span 3">
-        <Box fullWidth bg="white" height={48} borderRadius={5} fontSize={0}>SHOW MORE</Box>
-      </Box>
+        {/* Social */}
+        <RotatedBox fullWidth fullHeight gridArea="8 / 1 / 10 / span 2" justifyContent="space-between">
+          {social}
+        </RotatedBox>
 
-      <Box fullWidth fullHeight gridArea="15 / 9 / span 2 / span 2">
-        <KeyboardBackspace />
-      </Box>
-      <Box fullWidth fullHeight gridArea="15 / 11 / span 2 / span 2">
-        <KeyboardBackspace color="white" style={{ transform: 'rotate(180deg)' }}/>
-      </Box>
+        {/* Red bubble */}
+        <Box fullWidth fullHeight gridArea="15 / 1 / span 2 / span 2">
+          <Box round bg="reds.2" width={64} height={64} />
+        </Box>
 
-      <Box fullWidth fullHeight gridArea="3 / 4 / span 12 / span 9" bg="grayscale.6" flexDirection="column" alignItems="flex-start">
-        <Dxpe>Dxpe</Dxpe>
-        <Text mt={10} width={3 / 5} lineHeight="28px" color="grayscale.2">Dxpe Chef (Dope Chef) Was Established in 2008, specialising in contemporary casual street wear. A culture brand based on tours around the world, hence the sir name D.TOUR symbolised by the D.Globe logo</Text>
-      </Box>
-    
-    </Grid>
+        {/* Button */}
+        <Box fullWidth fullHeight gridArea="15 / 4 / span 2 / span 3">
+          <Box fullWidth bg="white" height={48} borderRadius={5} fontSize={0}>SHOW MORE</Box>
+        </Box>
+
+        <Box fullWidth fullHeight gridArea="15 / 9 / span 2 / span 2">
+          <KeyboardBackspace />
+        </Box>
+        <Box fullWidth fullHeight gridArea="15 / 11 / span 2 / span 2">
+          <KeyboardBackspace color="white" style={{ transform: 'rotate(180deg)' }}/>
+        </Box>
+
+        <Box fullWidth fullHeight gridArea="3 / 4 / span 12 / span 9" bg="grayscale.6" flexDirection="column" alignItems="flex-start">
+          <Dxpe>Dxpe</Dxpe>
+          <Text mt={10} width={3 / 5} lineHeight="28px" color="grayscale.2">Dxpe Chef (Dope Chef) Was Established in 2008, specialising in contemporary casual street wear. A culture brand based on tours around the world, hence the sir name D.TOUR symbolised by the D.Globe logo</Text>
+        </Box>
+      
+      </Grid>
+    </MotionContainer>
   );
 };
 
